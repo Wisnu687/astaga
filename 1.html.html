@@ -134,13 +134,13 @@
       });
 
       // DHT Suhu
-      db.ref("DHT/latest/suhu").get().then((snap) => {
+      db.ref("DHT/Latest/suhu").get().then((snap) => {
         const suhu = snap.val();
         updateChart(chartDHT, timestamp, chartDHT.data.datasets[0].data, suhu);
       });
 
       // DHT Kelembapan
-      db.ref("DHT/latest/kelembapan").get().then((snap) => {
+      db.ref("DHT/Latest/kelembapan").get().then((snap) => {
         const kelembapan = snap.val();
         updateChart(chartDHT, timestamp, chartDHT.data.datasets[1].data, kelembapan);
       });
